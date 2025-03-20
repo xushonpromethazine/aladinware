@@ -1,3 +1,4 @@
+script_key="UR_KEY_HERE";
 getgenv().aladinware = {
     -- // startup settings
     ["Start Up"] = {
