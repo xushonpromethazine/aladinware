@@ -1,0 +1,228 @@
+getgenv().aladinware = {
+    -- // startup settings
+    ["Start Up"] = {
+        ["Intro"] = false,
+        ["Loader"] = true,
+        ["Notifications"] = {
+            ["Active"] = true,
+            ["Duration"] = 1.5,
+            ["Color"] = Color3.fromRGB(255, 0, 0)
+        }
+    },
+
+    -- // silent aim
+    ["Silent Aim"] = {
+        ["Active"] = true,
+        ["Prediction"] = {
+            ["Amount"] = 0.047,
+            ["Options"] = {
+                ["Sync With Tracing"] = true,
+                ["Anti Curve"] = false,
+                ["AntiAimViewer"] = false
+            }
+        },
+        ["Auto Prediction"] = {
+            ["Activate"] = false,
+            ["Math"] = true,
+            ["Ping Based"] = {
+                ["Active"] = false,
+                [10] = 0.1,
+                [20] = 0.1,
+                [30] = 0.14,
+                [40] = 0.16,
+                [50] = 0.18,
+                [60] = 0.2
+            }
+        },
+
+        ["HitPart"] = {
+            ["Normal"] = "UpperTorso", -- // when on ground
+            ["In Air"] = "Head", -- // when in air
+            ["Closest Part"] = {
+                ["Active"] = false -- // hits closest part
+            },
+            ["MultipleParts"] = {
+                ["Active"] = false,
+                ["Parts"] = { "Head", "UpperTorso", "HumanoidRootPart" }
+            }
+        },
+        ["Nearest Point"] = {
+            ["Active"] = false, -- // hits nearest point
+            ["Mode"] = "full" -- // "full", "adaptive", "partial"
+        },
+
+        ["Hit Chance"] = {
+            ["Normal"] = 100, -- // hit chance on ground
+            ["In Air"] = 100 -- // hit chance in air
+        },
+
+        ["FOV"] = {
+            ["Visible"] = true,
+            ["Radius"] = 168,
+            ["Color"] = Color3.fromRGB(255, 255, 255),
+            ["Mode"] = "Circle", -- // "Circle", "Box"
+            ["Transparency"] = 1,
+            ["Filled"] = false
+        }
+    },
+
+    -- // aim assist
+    ["Tracing"] = {
+        ["Active"] = true,
+        ["Binding"] = {
+            ["Key"] = "C"
+        },
+
+        ["Prediction"] = {
+            ["Amount"] = 0,
+            ["Prediction Mode"] = "AssemblyLinearVelocity", -- // "AssemblyLinearVelocity", "Velocity"
+            ["Options"] = {
+                ["Smoothness"] = 1,
+                ["Strength"] = "Hard", -- // "Hard", "Soft"
+                ["Jump Offset"] = 5, -- Jump offset for prediction
+                ["Fall Offset"] = 0.15, -- Fall offset for prediction
+                ["Shake"] = {
+                    ["Active"] = false,
+                    ["X"] = 0, -- Shake amount for X-axis
+                    ["Y"] = 0.39, -- Shake amount for Y-axis
+                    ["Z"] = 0  -- Shake amount for Z-axis
+                }
+            }
+        },
+
+        ["HitPart"] = {
+            ["Normal"] = "Head", -- // hit part when on ground
+            ["Closest Part"] = false, -- // best with legit config
+            ["MultipleParts"] = {
+                ["Active"] = false, -- // hits every part selected
+                ["Parts"] = { "Head", "UpperTorso", "HumanoidRootPart" }
+            }
+        },
+
+        ["Auto Prediction"] = {
+            ["Active"] = false,
+            ["Math"] = true,
+            ["Ping Based"] = {
+                ["Active"] = false,
+                [10] = 0.1,
+                [20] = 0.1,
+                [30] = 0.14,
+                [40] = 0.16,
+                [50] = 0.18,
+                [60] = 0.2
+            }
+        },
+
+        ["FOV"] = {
+            ["Visible"] = true,
+            ["Radius"] = 236,
+            ["Color"] = Color3.fromRGB(255, 255, 255),
+            ["Mode"] = "Circle", -- // "Circle", "Box"
+            ["Transparency"] = 1
+        }
+    },
+
+    -- // triggerbot
+    ["Triggerbot"] = {
+        ["Active"] = true,
+        ["Binding"] = {
+            ["Key"] = "T",
+            ["Mode"] = "Toggle"  -- // "Toggle", "Hold"
+        },
+        ["Delay"] = {
+            ["Enabled"] = true,
+            ["Amount"] = 0.1
+        },
+        ["FOV"] = {
+            ["Enabled"] = true, 
+            ["Radius"] = 100,
+            ["Visible"] = true,
+            ["Color"] = Color3.fromRGB(255, 255, 255),
+            ["Transparency"] = 0.5
+        },
+        ["Target Selection"] = {
+            ["Mode"] = "Closest"  -- // "Closest", "Health", "Random"
+        }
+    },
+
+    -- // global checks
+    ["Checks"] = {
+        ["KO"] = true, -- // skip knocked players
+        ["Friend"] = false, -- // skips Friends
+        ["Wall"] = false, -- // shoot through walls
+        ["Constraint"] = true -- // skip grabbed players
+    },
+
+    ["Client"] = {
+        ["Player"] = false
+    },
+
+    -- // anti-aim resolver
+    ["Resolver"] = {
+        ["Active"] = false,
+        ["Velocity"] = 10,
+        ["Key"] = "G"
+    },
+
+    -- // movement stuff
+    ["Movement"] = {
+        ["Macro"] = {
+            ["Active"] = true,
+            ["Key"] = "X",
+            ["Mode"] = "Third", -- // "First", "Third"
+            ["Delay"] = 0.00001
+        },
+        ["Walkspeed"] = {
+            ["Active"] = true,
+            ["Key"] = "V",
+            ["Amount"] = 236 -- // speed
+        }
+    },
+
+    -- // visuals
+    ["Visual"] = {
+        ["Skybox"] = {
+            ["Active"] = true,
+            ["Texture"] = "Space Wave2" -- // texture
+        },
+
+        ["Highlight"] = {
+            ["Active"] = false,
+            ["Transparency"] = 0.5, -- // 50%
+            ["Outline Color"] = Color3.fromRGB(0, 0, 0),
+            ["Outline Transparency"] = 0.5 -- // 50%
+        },
+
+        ["Textures"] = {
+            ["Active"] = false,
+            ["Ignore"] = true, -- // ignores players
+            ["Material"] = Enum.Material.Rock, -- // material
+            ["Color"] = Color3.fromRGB(192, 192, 192)
+        }
+    },
+
+    -- // miscellaneous features
+    ["Miscellaneous"] = {
+        ["NoJumpCooldown"] = {
+            ["Active"] = true,
+        },
+        ["Inventory"] = {
+            ["Sorting"] = {
+                ["Active"] = true,
+                ["Key"] = "K",
+                ["Slot1"] = "[Double-Barrel SG]",
+                ["Slot2"] = "[Revolver]",
+                ["Slot3"] = "[Cookie]",
+                ["Slot4"] = "[Chicken]",
+                ["Slot5"] = "[Chicken]",
+                ["Slot6"] = "[Pizza]",
+                ["Slot7"] = "[Pizza]",
+                ["Slot8"] = "",
+                ["Slot9"] = "",
+                ["Slot0"] = "[Katana]"
+            }
+        }
+    }
+}
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/cf9bbc3393cfe9bfa344f4ca2c930e2f.lua"))()
