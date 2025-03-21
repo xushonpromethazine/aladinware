@@ -1,5 +1,5 @@
 script_key="UR_KEY_HERE";
-getgenv().aladinware = {
+getgenv().halorix = {
     -- // startup settings
     ["Start Up"] = {
         ["Intro"] = false,
@@ -7,7 +7,7 @@ getgenv().aladinware = {
         ["Notifications"] = {
             ["Active"] = true,
             ["Duration"] = 1.5,
-            ["Color"] = Color3.fromRGB(255, 0, 0)
+            ["Color"] = Color3.fromRGB(1, 1, 1)
         }
     },
 
@@ -18,7 +18,7 @@ getgenv().aladinware = {
             ["Amount"] = 0.047,
             ["Options"] = {
                 ["Sync With Tracing"] = true,
-                ["Anti Curve"] = false,
+                ["Anti Curve"] = true,
                 ["AntiAimViewer"] = false
             }
         },
@@ -43,7 +43,7 @@ getgenv().aladinware = {
                 ["Active"] = false -- // hits closest part
             },
             ["MultipleParts"] = {
-                ["Active"] = false,
+                ["Active"] = true,
                 ["Parts"] = { "Head", "UpperTorso", "HumanoidRootPart" }
             }
         },
@@ -78,8 +78,8 @@ getgenv().aladinware = {
             ["Amount"] = 0,
             ["Prediction Mode"] = "AssemblyLinearVelocity", -- // "AssemblyLinearVelocity", "Velocity"
             ["Options"] = {
-                ["Smoothness"] = 1,
-                ["Strength"] = "Hard", -- // "Hard", "Soft"
+                ["Smoothness"] = 0.079,
+                ["Strength"] = "Soft", -- // "Hard", "Soft"
                 ["Jump Offset"] = 5, -- Jump offset for prediction
                 ["Fall Offset"] = 0.15, -- Fall offset for prediction
                 ["Shake"] = {
@@ -95,7 +95,7 @@ getgenv().aladinware = {
             ["Normal"] = "Head", -- // hit part when on ground
             ["Closest Part"] = false, -- // best with legit config
             ["MultipleParts"] = {
-                ["Active"] = false, -- // hits every part selected
+                ["Active"] = true, -- // hits every part selected
                 ["Parts"] = { "Head", "UpperTorso", "HumanoidRootPart" }
             }
         },
@@ -127,12 +127,12 @@ getgenv().aladinware = {
     ["Triggerbot"] = {
         ["Active"] = true,
         ["Binding"] = {
-            ["Key"] = "T",
+            ["Key"] = "X",
             ["Mode"] = "Toggle"  -- // "Toggle", "Hold"
         },
         ["Delay"] = {
             ["Enabled"] = true,
-            ["Amount"] = 0.1
+            ["Amount"] = 0.0001
         },
         ["FOV"] = {
             ["Enabled"] = true, 
@@ -155,7 +155,7 @@ getgenv().aladinware = {
     },
 
     ["Client"] = {
-        ["Player"] = false
+        ["Player"] = true
     },
 
     -- // anti-aim resolver
@@ -169,7 +169,7 @@ getgenv().aladinware = {
     ["Movement"] = {
         ["Macro"] = {
             ["Active"] = true,
-            ["Key"] = "X",
+            ["Key"] = "Z",
             ["Mode"] = "Third", -- // "First", "Third"
             ["Delay"] = 0.00001
         },
@@ -184,7 +184,7 @@ getgenv().aladinware = {
     ["Visual"] = {
         ["Skybox"] = {
             ["Active"] = true,
-            ["Texture"] = "Space Wave2" -- // texture
+            ["Texture"] = "Skibidi" -- // texture
         },
 
         ["Highlight"] = {
@@ -195,7 +195,7 @@ getgenv().aladinware = {
         },
 
         ["Textures"] = {
-            ["Active"] = false,
+            ["Active"] = true,
             ["Ignore"] = true, -- // ignores players
             ["Material"] = Enum.Material.Rock, -- // material
             ["Color"] = Color3.fromRGB(192, 192, 192)
@@ -226,4 +226,4 @@ getgenv().aladinware = {
     }
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/cf9bbc3393cfe9bfa344f4ca2c930e2f.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f85a9244caf7e154dbcecf395bac7580.lua"))()
