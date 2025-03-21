@@ -43,7 +43,7 @@ getgenv().halorix = {
                 ["Active"] = false -- // hits closest part
             },
             ["MultipleParts"] = {
-                ["Active"] = true,
+                ["Active"] = false,
                 ["Parts"] = { "Head", "UpperTorso", "HumanoidRootPart" }
             }
         },
