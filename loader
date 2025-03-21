@@ -78,8 +78,8 @@ getgenv().halorix = {
             ["Amount"] = 0,
             ["Prediction Mode"] = "AssemblyLinearVelocity", -- // "AssemblyLinearVelocity", "Velocity"
             ["Options"] = {
-                ["Smoothness"] = 0.079,
-                ["Strength"] = "Soft", -- // "Hard", "Soft"
+                ["Smoothness"] = 1,
+                ["Strength"] = "Hard", -- // "Hard", "Soft"
                 ["Jump Offset"] = 5, -- Jump offset for prediction
                 ["Fall Offset"] = 0.15, -- Fall offset for prediction
                 ["Shake"] = {
@@ -95,7 +95,7 @@ getgenv().halorix = {
             ["Normal"] = "Head", -- // hit part when on ground
             ["Closest Part"] = false, -- // best with legit config
             ["MultipleParts"] = {
-                ["Active"] = true, -- // hits every part selected
+                ["Active"] = false, -- // hits every part selected
                 ["Parts"] = { "Head", "UpperTorso", "HumanoidRootPart" }
             }
         },
